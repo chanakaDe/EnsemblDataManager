@@ -19,5 +19,6 @@ $app->get('/', function () use ($app) {
 $app->group(['prefix' => 'api/v1', 'namespace' => 'App\Http\Controllers'], function ($app) {
 
     $app->get('migrate_data', 'MigrateController@testDualDatabaseConnection');
+    $app->get('convert_data', 'MigrateController@convertPerlToJson');
 
 });
